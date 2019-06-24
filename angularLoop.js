@@ -62,20 +62,6 @@ var directive = function (name, directiveFn) {
 
 
 // Etape 6 : compile
-var compile = function (element, scope) {
-    console.log(element);
-    for (child of element.children) {
-        compile(child, scope);
-    }
-    for (attribute of element.attributes) {
-        directiveFn = directive(attribute.name);
-        if (directiveFn) {
-            directiveFn(element, scope);
-        }
-    }
-}
-
-compile(document.body, monScope);
 
 // Etape 7 : ng-bind : bind value to element
 
