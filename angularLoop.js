@@ -89,20 +89,3 @@ compile(document.body, monScope);
 
 monScope.monModel = "titre updated";
 monScope.digest();
-
-// Etape 8 : ng-model
-directive("ng-model", function (element, scope) {
-    scope.watch(
-        () => scope[element.attributes['ng-model'].value],
-        function (newValue) {
-            element.value = newValue;
-        }
-    );
-    element.addEventListener('keyup', function () {
-        scope.apply(function () {
-            scope[element.attributes['ng-model'].value] = element.value;
-        });
-    });
-});
-
-compile(document.body, monScope);
