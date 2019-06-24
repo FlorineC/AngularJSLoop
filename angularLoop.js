@@ -75,17 +75,8 @@ var compile = function (element, scope) {
     }
 }
 
-// Etape 7 : ng-bind : bind value to element
-directive("ng-bind", function (element, scope) {
-    scope.watch(
-        () => scope[element.attributes['ng-bind'].value],
-        function (newValue) {
-            element.innerHTML = newValue;
-        })
-});
-
-
 compile(document.body, monScope);
 
-monScope.monModel = "titre updated";
-monScope.digest();
+// Etape 7 : ng-bind : bind value to element
+
+// Etape 8 : ng-model
