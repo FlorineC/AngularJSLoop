@@ -52,14 +52,6 @@ Scope.prototype.apply = function (expressionFn) {
     }
 }
 // Etape 5 : directives
-var directives = {};
-var directive = function (name, directiveFn) {
-    if (directiveFn) {
-        directives[name] = directiveFn;
-    }
-    return directives[name];
-}
-
 
 // Etape 6 : compile
 
