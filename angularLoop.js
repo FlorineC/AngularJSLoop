@@ -23,23 +23,6 @@ monScope.watch(
     }
 );
 // Etape 3 : la boucle digest
-Scope.prototype.digest = function () {
-    var hasChanged = false;
-    do {
-        hasChanged = false;
-        for (var watcher of this.watchers) {
-            if (watcher.valueFn(this) !== watcher.lastValue) {
-                hasChanged = true;
-                watcher.listenerFn(watcher.valueFn(this), watcher.lastValue);
-            }
-            watcher.lastValue = watcher.valueFn(this);
-        }
-    } while (hasChanged);
-}
-
-monScope.digest();
-monScope.monModel = "titre changed";
-monScope.digest();
 
 // Etape 4 : apply()
 
