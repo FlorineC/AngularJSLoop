@@ -42,15 +42,7 @@ monScope.monModel = "titre changed";
 monScope.digest();
 
 // Etape 4 : apply()
-Scope.prototype.apply = function (expressionFn) {
-    try {
-        expressionFn();
-    } catch (error) {
-        console.log(error);
-    } finally {
-        this.digest();
-    }
-}
+
 // Etape 5 : directives
 
 // Etape 6 : compile
