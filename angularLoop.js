@@ -16,12 +16,7 @@ var monScope = new Scope();
 monScope.monModel = "titre information";
 
 // Etape 2 : scope.watch
-monScope.watch(
-    (scope) => scope.monModel.titre,
-    function (newValue, oldValue) {
-        console.log("Le titre est passé de " + oldValue + " à " + newValue);
-    }
-);
+
 // Etape 3 : la boucle digest
 
 // Etape 4 : apply()
