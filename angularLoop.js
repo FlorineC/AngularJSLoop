@@ -89,3 +89,5 @@ compile(document.body, monScope);
 
 monScope.monModel = "titre updated";
 monScope.digest();
+
+// Etape 8 : ng-model
